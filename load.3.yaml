@@ -22,5 +22,6 @@ telegraf:
 
 influxdb:
   enabled: true
+  package: yandextank.plugins.Influx
   address: metrics.loadlab.ragozin.info
   tank_tag: loadgen
