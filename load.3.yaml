@@ -14,3 +14,4 @@ console:
 telegraf:
   enabled: true
   package: yandextank.plugins.Telegraf
+  default_target: root@wp.loadlab.ragozin.info
