@@ -1,6 +1,5 @@
 from locust import HttpLocust, TaskSet, task
 from pyquery import PyQuery
-from itertools import cycle
 
 class WordPress(TaskSet):
 
