@@ -16,6 +16,9 @@ phantom:
 console:
   enabled: true
 
-telegraf:
+influxdb:
   enabled: true
-  package: yandextank.plugins.Telegraf
+  package: yandextank.plugins.Influx
+  address: metrics.loadlab.ragozin.info
+  database: tank
+  tank_tag: loadgen
