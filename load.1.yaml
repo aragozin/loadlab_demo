@@ -8,7 +8,7 @@ phantom:
     - /
   load_profile:
     load_type: rps # schedule load by defining requests per second
-    schedule: line(1, 20, 5m)
+    schedule: line(1, 50, 2m)
 console:
   enabled: true
 telegraf:
