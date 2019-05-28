@@ -3,9 +3,9 @@ overload:
   package: yandextank.plugins.DataUploader
   token_file: "token.txt"
 phantom:
-  address: 192.168.100.140
+  address: wp.loadlab.ragozin.info
   uris:
-    - /index.html
+    - /
   load_profile:
     load_type: rps # schedule load by defining requests per second
     schedule: line(1, 20, 5m)
