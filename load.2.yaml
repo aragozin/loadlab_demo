@@ -4,7 +4,7 @@ overload:
   token_file: "token.txt"
 phantom:
   address: wp.loadlab.ragozin.info
-  ammofile: access-10k.log
+  ammofile: access-10k
   ammotype: access
   load_profile:
     load_type: rps # schedule load by defining requests per second
