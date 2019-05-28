@@ -8,7 +8,7 @@ object Engine extends App {
     .resourcesDirectory(IDEPathHelper.resourcesDirectory.toString)
     .resultsDirectory(IDEPathHelper.resultsDirectory.toString)
     .binariesDirectory(IDEPathHelper.mavenBinariesDirectory.toString)
-    .simulationClass("wordstress.ConstantUserCountLowRun")
+    .simulationClass("wordstress.LoadSpikeRun")
 
   Gatling.fromMap(props.build)
 }

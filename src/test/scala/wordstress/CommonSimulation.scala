@@ -1,6 +1,7 @@
 package wordstress
 
 import io.gatling.core.Predef._
+import io.gatling.core.filter.{Filters, WhiteList}
 import io.gatling.http.Predef._
 
 class CommonSimulation extends Simulation {
@@ -9,6 +10,7 @@ class CommonSimulation extends Simulation {
 
   val httpProtocol = http
     //    .proxy(Proxy("127.0.0.1",8888))
+//      .inferHtmlResources(WhiteList(Seq("http://wp\\.loadlab.*")))
       .baseUrl("http://wp.loadlab.ragozin.info")
       .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
       .acceptEncodingHeader("gzip, deflate")

@@ -6,13 +6,15 @@ import scala.concurrent.duration._
 
 class QuickmarkRun extends CommonSimulation {
 
+	  val time = 10 minutes
+
 		setUp(
 				scenario("Quick benchmark")
 					.exec(Scripts.compositeWordpressLoad())
 
-					.inject(rampConcurrentUsers(1).to(100).during (10 minutes))
+					.inject(constantConcurrentUsers(1).during(20 seconds), rampConcurrentUsers(2).to(100).during (time))
 
 					.protocols(httpProtocol)
-		).maxDuration(10 minutes).disablePauses
+		).maxDuration(time).disablePauses
 
 }

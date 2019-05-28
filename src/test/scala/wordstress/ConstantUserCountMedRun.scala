@@ -6,16 +6,19 @@ import scala.concurrent.duration._;
 
 class ConstantUserCountMedRun extends CommonSimulation {
 
-    val USER_COUNT = Math.ceil(0.8 * LOAD_FACTOR).asInstanceOf[Int];
+	val BACKGROUND_RATE = Math.ceil(0.4 * LOAD_FACTOR).asInstanceOf[Int];
+	val USER_COUNT = Math.ceil(1.5 * LOAD_FACTOR).asInstanceOf[Int];
 
-		setUp(
-				scenario("Constants user low")
-					.exec(Scripts.compositeWordpressLoad())
+	println("BACKGROUND_RATE:" + BACKGROUND_RATE);
+	println("USER_COUNT:" + USER_COUNT);
 
-					.inject(rampConcurrentUsers(1).to(USER_COUNT).during(20 seconds), constantConcurrentUsers(USER_COUNT).during(5 minutes))
+	setUp(
+		scenario("Constant low load")
+			.exec(Scripts.compositeWordpressLoad())
 
-					.protocols(httpProtocol)
+			.inject(rampConcurrentUsers(1).to(USER_COUNT).during(20 seconds), constantConcurrentUsers(USER_COUNT).during(5 minutes))
 
-		).maxDuration(5 minutes).disablePauses
+			.protocols(httpProtocol)
 
+	).maxDuration(5 minutes).pauses(uniformPausesPlusOrMinusDuration(0.5 second))
 }
