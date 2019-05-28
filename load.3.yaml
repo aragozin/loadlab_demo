@@ -24,4 +24,5 @@ influxdb:
   enabled: true
   package: yandextank.plugins.Influx
   address: metrics.loadlab.ragozin.info
+  database: tank
   tank_tag: loadgen
