@@ -5,7 +5,7 @@ overload:
 phantom:
   address: wp.loadlab.ragozin.info
   ammofile: access-10k
-  ammotype: access
+  ammo_type: access
   load_profile:
     load_type: rps # schedule load by defining requests per second
     schedule: line(1, 20, 5m)
