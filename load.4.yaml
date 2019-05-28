@@ -16,6 +16,9 @@ phantom:
 console:
   enabled: true
 
+telegraf:
+  enabled: false
+
 influxdb:
   enabled: true
   package: yandextank.plugins.Influx
