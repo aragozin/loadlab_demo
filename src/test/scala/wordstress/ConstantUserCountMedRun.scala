@@ -7,7 +7,7 @@ import scala.concurrent.duration._;
 class ConstantUserCountMedRun extends CommonSimulation {
 
 	val BACKGROUND_RATE = Math.ceil(0.4 * LOAD_FACTOR).asInstanceOf[Int];
-	val USER_COUNT = Math.ceil(1.5 * LOAD_FACTOR).asInstanceOf[Int];
+	val USER_COUNT = Math.ceil(2 * LOAD_FACTOR).asInstanceOf[Int];
 
 	println("BACKGROUND_RATE:" + BACKGROUND_RATE);
 	println("USER_COUNT:" + USER_COUNT);
